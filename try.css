@@ -1,0 +1,305 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    height: 100vh;
+    background:#afb4ad
+}
+header{
+    padding: 0 8%;
+    margin: 20px;
+    height: 60px;
+
+    background-color: #543333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    border-radius: 11%;
+}
+
+/* button{
+    display: none;
+    width: 0;
+    height: 0;
+    padding-bottom: 10px;
+} */
+ .header__burger-btn{
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+ }
+
+.header__burger-btn span{
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    left: 5px;
+    transition: transform .5s, opacity .5, background-color .5s;
+}
+
+
+.header__burger-btn span:nth-child(1) {
+    transform: translateY(-10px);
+}
+.header__burger-btn span:nth-child(3) {
+    transform: translateY(10px);
+}
+.header.open .header__burger-btn span:nth-child(1){
+    transform: translateY(0) rotate(-45deg);
+    transition: .5s;
+}
+.header.open .header__burger-btn span:nth-child(2){
+    opacity: 0;
+}
+.header.open .header__burger-btn span:nth-child(3){
+    transform:  translateY(0) rotate(45deg);
+    transition: .5s;
+}
+
+.title{
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    cursor: pointer;
+}
+.menu{
+    padding-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none; 
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.menu-link{
+    padding: 12px;
+    color: #fff;
+}
+.menu-link:hover{
+    background-color: #433b3b;
+}
+
+
+.h1-main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    text-align: center;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 48px;
+    color: #fff;
+    text-shadow: 3px 2px 0 #333;
+    cursor: pointer;
+
+}
+.h2-main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 38px;
+    color: #fff;
+    text-shadow: 3px 2px 0 #333;
+    margin-bottom: 170px;
+}
+
+
+footer{
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #543333;
+    height: 80px;
+    border-radius: 11%;
+
+}
+.telephone{
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    color: #fff;
+    text-shadow: 3px 2px 0 #333;
+}
+.insta{
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 28px;
+    color: #fff;
+    text-shadow: 3px 2px 0 #333;
+}
+
+
+
+@media(max-width:992px){
+    .header__burger-btn{
+        display: block;
+    }
+    
+    .menu{
+        position: absolute;
+        display: block;
+        margin-top: 2px;
+        width: 250px;
+        left: -450px;
+        top: 80px;
+        background-color: #9a9e99;
+        padding: 20px 20px 20px 20px;
+        transition: transform .5s;
+    }
+    .menu-item{
+        font-size: 21px;
+        display: block;
+        padding: 10px 0;
+        border-top: 1px solid #333;
+    }
+    .menu-item:first-child{
+        border: none;
+    }
+    .header.open .menu{
+        transform: translateX(540px);
+    }
+
+}
+@media(max-width:768px){
+    .header__burger-btn{
+        display: block;
+    }
+    
+    .menu{
+        position: absolute;
+        display: block;
+        margin-top: 2px;
+        width: 250px;
+        left: -450px;
+        top: 80px;
+        background-color: #9a9e99;
+        padding: 20px 20px 20px 20px;
+        transition: transform .5s;
+    }
+    .menu-item{
+        font-size: 21px;
+        display: block;
+        padding: 10px 0;
+        border-top: 1px solid #333;
+    }
+    .menu-item:first-child{
+        border: none;
+    }
+    .header.open .menu{
+        transform: translateX(540px);
+    }
+    .h1-main{
+        font-size: 34px;
+    }
+    .h2-main{
+        font-size: 24px;
+    }
+}
+@media(max-width:480px){
+    .header__burger-btn{
+        display: block;
+    }
+    
+    .menu{
+        position: absolute;
+        display: block;
+        margin-top: 2px;
+        width: 200px;
+        left: -450px;
+        top: 80px;
+        background-color: #9a9e99;
+        padding: 20px 20px 20px 20px;
+        transition: transform .5s;
+    }
+    .menu-item{
+        font-size: 21px;
+        display: block;
+        padding: 10px 0;
+        border-top: 1px solid #333;
+    }
+    .menu-item:first-child{
+        border: none;
+    }
+    .header.open .menu{
+        transform: translateX(500px);
+    }
+    .h1-main{
+        font-size: 24px;
+    }
+    .h2-main{
+        font-size: 14px;
+    }
+}
+@media(max-width:320px){
+    .title{
+        font-size: 24px;
+    }
+    .header__burger-btn{
+        display: block;
+    }
+    
+    .menu{
+        position: absolute;
+        display: block;
+        margin-top: 2px;
+        width: 150px;
+        left: -450px;
+        top: 80px;
+        background-color: #9a9e99;
+        padding: 20px 20px 20px 20px;
+        transition: transform .5s;
+    }
+    .menu-item{
+        font-size: 21px;
+        display: block;
+        padding: 10px 0;
+        border-top: 1px solid #333;
+    }
+    .menu-item:first-child{
+        border: none;
+    }
+    .header.open .menu{
+        transform: translateX(500px);
+    }
+    .header-logo{
+        font-size: 18px;
+    }
+    .h1-main{
+        font-size: 24px;
+        padding: 0 5px 5px 5px;
+    }
+    .h2-main{
+        font-size: 14px;
+    }
+    .telephone{
+        font-size: 14px;
+    }
+    .insta{
+        font-size: 14px;
+    }
+}
